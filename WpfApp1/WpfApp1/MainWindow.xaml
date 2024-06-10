@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+    <Grid Height="300">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label x:Name="label1" HorizontalAlignment="Center">Jakie białko byś wybrał:</Label>
+            <RadioButton x:Name="radio1" Content="KFD" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton x:Name="radio2" Content="Ryse" Checked="RadioButton_Checked_1"></RadioButton>
+            <RadioButton x:Name="radio3" Content="WK "></RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.RowSpan="2">
+            <Label HorizontalAlignment="Center">Jakie zwierzęta powinny być na siłowni:</Label>
+            <CheckBox x:Name="psy" Content="Psy" Checked="CheckBox_Checked"></CheckBox>
+            <CheckBox x:Name="koty" Content="Koty" Checked="CheckBox_Checked_1"></CheckBox>
+            <CheckBox x:Name="malpka" Content="Małpy" Checked="malpka_Checked"></CheckBox>
+            <CheckBox x:Name="iguany" Content="Iguany"></CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Label HorizontalAlignment="Center">Czy woda powinna być obowiązkowa na siłowni</Label>
+            <RadioButton x:Name="takWoda" Content="Tak"></RadioButton>
+            <RadioButton Content="Nie"></RadioButton>
+            
+        </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label HorizontalAlignment="Center">Czy robienie nóg powinno być dozwolone na siłowni</Label>
+                <RadioButton Content="Tak"></RadioButton>
+                <RadioButton x:Name="nogiNie" Content="NIEE"></RadioButton>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <Label HorizontalAlignment="Center">Pan Paweł to kox</Label>
+                <CheckBox x:Name="pPTak">TAK</CheckBox>
+            </StackPanel>
+    </Grid>
+        <Button Height="40" Width="300" Click="Button_Click">Zatwierdź</Button>
+    </StackPanel>
+</Window>
